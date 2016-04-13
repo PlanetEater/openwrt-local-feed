@@ -8,7 +8,7 @@
 include ../shorewall.mk
 
 PKG_NAME:=shorewall-core
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_MD5SUM:=05cb5b936713e074c2da8f02100d3d23
 
@@ -17,7 +17,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/shorewall-core
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=+ip +iptables +perl +perlbase-digest
+  DEPENDS:=+ip +iptables
   TITLE:=Shorewall Core
   URL:=http://www.shorewall.net/
   SUBMENU:=Firewall
