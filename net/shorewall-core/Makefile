@@ -33,15 +33,14 @@ define Package/shorewall-core/conffiles
 	/usr/share/shorewall/shorewallrc
 endef
 
-## CONFIGURE_ARGS += \
-##	vendor=linux
-
 # Disable calling make
 define Build/Compile
+  true
 endef
 
 # Disable calling ./configure
 define Build/Configure
+  true
 endef
 
 define Build/Install
