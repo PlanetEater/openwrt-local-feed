@@ -7,9 +7,9 @@
 
 include $(TOPDIR)/rules.mk
 
-_VER_MAJOR:=5.0
-_VER_MINOR:=.7
-_VER_PLEVEL:=.2
+_VER_MAJOR:=5.1
+_VER_MINOR:=.2
+_VER_PLEVEL:=.3
 _SRCPATH:=$(_VER_MAJOR)/shorewall-$(_VER_MAJOR)$(_VER_MINOR)/
 PKG_VERSION:=$(_VER_MAJOR)$(_VER_MINOR)$(_VER_PLEVEL)
 

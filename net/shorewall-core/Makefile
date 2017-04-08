@@ -8,9 +8,9 @@
 include ../shorewall.mk
 
 PKG_NAME:=shorewall-core
-PKG_RELEASE:=2
+PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_MD5SUM:=05cb5b936713e074c2da8f02100d3d23
+PKG_MD5SUM:=0534d3ca85a2c15146e926111d36dc76
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -48,6 +48,8 @@ define Build/Install
 endef
 
 define Package/shorewall-core/install
+	$(INSTALL_DIR) $(1)/sbin
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/sbin/shorewall $(1)/sbin/
 	$(INSTALL_DIR) $(1)/usr/share
 	$(CP) $(PKG_INSTALL_DIR)/usr/share/shorewall $(1)/usr/share
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/share/shorewall/wait4ifup $(1)/usr/share/shorewall/

@@ -8,9 +8,9 @@
 include ../shorewall.mk
 
 PKG_NAME:=shorewall-lite
-PKG_RELEASE:=2
+PKG_RELEASE:=1
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_MD5SUM:=ba435fda1d3e6c80729182cfbd220038
+PKG_MD5SUM:=cf10786e1a41a68fd19eb9816d6a1662
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -54,7 +54,7 @@ endef
 
 define Package/shorewall-lite/install
 	$(INSTALL_DIR) $(1)/sbin
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/sbin/$(PKG_NAME) $(1)/sbin
+	$(CP) $(PKG_INSTALL_DIR)/sbin/$(PKG_NAME) $(1)/sbin/
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/iface
 	$(INSTALL_BIN) ./files/hotplug_iface $(1)/etc/hotplug.d/iface/05-shorewall-lite
 	$(INSTALL_DIR) $(1)/usr/share
